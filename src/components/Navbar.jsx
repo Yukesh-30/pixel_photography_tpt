@@ -61,7 +61,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-brand-beige p-2 mr-10 outline-none focus:outline-none flex-shrink-0 ml-auto"
+          className="md:hidden text-brand-beige p-2 mr-6 outline-none focus:outline-none flex-shrink-0 ml-auto"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle Menu"
         >
