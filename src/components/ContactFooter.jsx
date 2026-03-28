@@ -27,8 +27,8 @@ export default function ContactFooter() {
               <div>
                 <h4 className="font-semibold mb-1">Studio Location</h4>
                 <p className="text-brand-beige/60 font-light text-sm">
-                  123 Pixel Street, Karanodai<br />
-                  Chennai, Tamil Nadu 600067
+                  Pixel Photography, GNT Road<br />
+                  Karanodai, Chennai, Tamil Nadu 600067
                 </p>
               </div>
             </div>
@@ -53,7 +53,12 @@ export default function ContactFooter() {
           </div>
 
           {/* Map Placeholder */}
-          <div className="w-full h-48 bg-neutral-900 border border-white/10 rounded-sm flex items-center justify-center relative overflow-hidden group">
+          <a 
+            href="https://www.google.com/maps/dir/13.248696,80.1544897/Pixel+Photography,+GNT+Rd,+Karanodai,+Tamil+Nadu+600067/@13.2471763,80.1551273,18z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3a527d2c9091860d:0x22e9c997b3381f9!2m2!1d80.1579383!2d13.2459968?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-48 bg-neutral-900 border border-white/10 rounded-sm flex items-center justify-center relative overflow-hidden group mb-12"
+          >
             <div className="absolute inset-0 bg-brand-black/40 group-hover:bg-brand-black/20 transition-colors z-10"></div>
             {/* Mapbg simulation */}
             <img 
@@ -67,7 +72,7 @@ export default function ContactFooter() {
                 Karanodai, Chennai
               </span>
             </div>
-          </div>
+          </a>
         </motion.div>
 
         {/* Right Column - Contact Form */}
