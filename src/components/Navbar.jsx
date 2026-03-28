@@ -10,7 +10,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,11 +24,11 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-brand-black/90 backdrop-blur-lg py-4 shadow-lg" : "bg-transparent py-6"
+        scrolled ? "bg-brand-black/80 backdrop-blur-md py-4 shadow-lg" : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center w-full">
-        <a href="#" className="flex flex-col flex-shrink-0">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+        <a href="#" className="flex flex-col">
           <span className="font-serif text-2xl font-bold tracking-wider text-brand-beige">
             PIXEL
           </span>
@@ -39,7 +38,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8 ml-auto">
+        <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -61,9 +60,8 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-brand-beige p-2 mr-6 outline-none focus:outline-none flex-shrink-0 ml-auto"
+          className="md:hidden text-brand-beige"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle Menu"
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
